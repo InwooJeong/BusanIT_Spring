@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<settings>
+		<!-- DB에서 데이터 조회 또는 삽입 등 null 허용 -->
+		<setting name="jdbcTypeForNull" value="NULL"/>
+		<setting name="callSettersOnNulls" value="true"/>
+		
+		<!-- 동일 select문 요청 시 기존 캐시된 내용으로 가져옴 -> 속도 향상 -->
+		<setting name="cacheEnabled" value="true"/>
+		
+		<!-- 테이블 컬럼명과 VO객체 setter명 매핑 연결 규칙 설정 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<typeAliases>
+		<package name="com.example.domain"/>
+	</typeAliases>
+	
+</configuration>
